@@ -7,14 +7,14 @@
 		<title>reveal.js - The HTML Presentation Framework</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="author" content="Philipp Burckhardt">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
@@ -28,6 +28,34 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		
+		<!-- {{{ MathJax Config -->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			"HTML-CSS": {
+				scale: 95,
+				showMathMenu: false,
+				mtextFontInherit: true,
+				preferredFont: "TeX",
+				styles: {
+					".MathJax_Display": {
+						margin: "0.75em 0em"
+					}
+				}
+			},
+			"SVG": {mtextFontInherit: true, scale: 95, showMathMenu: false},
+  			jax: ["input/TeX","output/HTML-CSS"],
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  			extensions: ["tex2jax.js"],
+  			TeX: {
+    			//extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    			extensions: ["AMSmath.js","AMSsymbols.js"]
+			}
+		});
+	</script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js"></script>
+	<!-- }}} -->
+		
 	</head>
 
 	<body>
@@ -37,23 +65,254 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Scrutinizing Political Sentiments</h1>
+					<h3>Language. Ideologies. Networks</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>A Presentation by <a href="http://philipp-burckhardt.com">Philipp Burckhardt</a> for the PhD Seminar at <br> 
+						10/28/2013, Heinz College, Carnegie Mellon University</small>
 					</p>
 				</section>
-
+				
 				<section>
-					<h2>Heads Up</h2>
+					<h2>State of Things</h2>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+				    The sphere of politics has become blurry with the advent of social media and the blogosphere. In this complicated landscape, we wish to study how people get mobilized
+				    for political action, how politicians try to reach out for their voters, how they portray themselves and their objectives. 	
 					</p>
+				</section>
+				
+				<section data-background="teabaggers1.jpg" data-transition="fade" data-background-transition="fade">
+						<h2 col="black">It's all about slogans. It's all about language.</h2>
+				</section>
+				
+				<section  data-background="change.jpg">
+				</section>
+				
+				<section>
+					<h2>The Rise of Populism</h2>
+					<h3>From representational institutions to unregulated self-expression.  </h3>
+				</section>
+				
+				<section>
+					<h2>The Internet conceived as a political space</h2>
+				</section>
+				
+				<section style="display: block;">
+					<h2>Long-Term Objective</h2>
+					<ul>
+						<li>Analyze the changing political landscape, trying to identify how alliances form and political networks are established.</li>
+						<li>Study of Lobbyism and Interest Groups (Open and hidden networks) </li>			
+					</ul>			
+				</section>
+				
+				<section>
+					<p> Upside: The Internet is a big database.</p>
+					<p> Downside: This database is very unstructured. </p>
+				</section>
+				
+				<section >
+			    <h2 style="vertical-align: center">Challenge: How do we cope with the massive overkill of information in the Internet age?</h2>
+			    	
+				</section>
+				
+				<section>
+					<section>
+					<h2> Excursion: NewscrapeR </h2>
+					<p>  I have developed tool for scraping Internet data. Used in analysis of newspaper articles and their repurcussions on Twitter. </p>
+					</section>
+					<section>
+ 					<h2> NewscrapeR (2)</h2>	
+ 					<ul>
+ 						<li>Usage of YQL (Yahoo! Query Language), which streamlines the process of scraping data from the Web by circumventing the APIs of
+ 							the individual providers</li>
+ 						<li>Automated Scheduling of Scraping Tasks</li>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+ 					</ul> 
+ 					</section>
+				</section> 
+				
+				<section>
+					Principles of Topic Modelling. Need to go deeper: Sentiment analysis, semantics and relationship analysis. 
+				</section>
+				
+				<section data-background="#4d7e65" data-transition="linear" data-background-transition="slide">
+					<h1> Natural Language Processing</h1>
+				</section>
+				
+				
+				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+				<h2>Named Entity Recognition</h2>
+				<div align="left">
+				<p> The traditional method of extracting information from the Web, keywordbased search, is insufficient: One can only find what one is looking for.</p>
+				<p> Instead: Use the learned entities to annotate texts.</p>
+				</div>
+
+				</section>
+				
+				<section data-transition="linear" data-background-transition="slide">
+ 				<object style="position:absolute; width: 200%; top: -300px; left: -450px" type="image/svg+xml" data="lod-cloud.png"></object>
+ 				<div style="position: relative; color:black; background-color:white;background-clip:content-box; border:2px solid grey">
+ 					<h2 style="color:black">Exploiting Information about the World using Linked Data</h2>
+ 					<small>Linking Open Data cloud diagram, by Richard Cyganiak and Anja Jentzsch <a href='http://lod-cloud.net/'>http://www.lod.cloud.net</a></small>
+ 				</div>
+ 				</section>
+ 				
+ 				<section>
+ 					<div style="position:absolute; width: 200%; top: 0px; left: -450px"><iframe src="http://dbpedia.org/page/Barack_Obama" width="1200" height="700"></iframe>
+ 					</div>
+ 				</section>
+ 				
+ 				<section>
+ 					<section>
+ 				<div style="display:block">Using Semantic Web Technologies, I have built entity recognition system which can be automatically extended (includes already > 50,000 entities).
+ 				</div>
+ 			    <a href="http://philipp-burckhardt.com/Semantik/tokenizer" target="_blank">Let's see it in action</a>
+ 			    	</section>
+ 			
+            <section style="font-size: 0.9em; display: block;">
+                <h2> Semantic Web Technologies </h2>
+                <div align="left">
+                <b>RDF (Resource Description Framework) </b>
+                <ul> 
+                	<li>Allows to define triples of 'subject', 'predicate', 'value'</li>
+                	<li>Designed to be read and understood by computers.</li>
+                	<li> URIs are used as names for entities. 
+                	  <li>HTTP URIs can be looked up to obtain useful information</li>
+                	  <li>Allows to deal with name disambiguation problem</li>
+                	</li>
+                </ul> <br>
+                <b>OWL (Web Ontology Language)</b>
+                <ul>           
+                	<li>Based on RDF, OWL allows logical statements and inference</li>
+                </ul>      
+                </div>
+            </section>
+ 				</section>
+				
+				<section data-transition="linear" data-background-transition="slide">
+					<h2>Co-Occurence Network Data</h2>
+					
+					<div class="definition">
+			\[\begin{align}
+  {\text{Construct (symmetric) Adjacency matrix }}{\mathbf{A}}{\text{ with elements}}  \\
+  {A_{ij}} = {A_{ji}} = \# {\text{ of times actor i and j co - occur in a sentence}}  
+\end{align} \]</div>
+				</section>
+				
+				<section data-transition="fade" data-background-transition="fade">
+				<p>Here is the problem:</p>
+					
+<div style="font-size: 22px; text-align: justify; line-height: 25px;">Rep. Michele Bachmann (R-Minn.) said Tuesday that President Obama has “committed impeachable offenses” and that the House could hold a hearing to impeach.
+
+“We can have an impeachment hearing in the House, and in my mind the president has committed impeachable offenses,” Bachmann told conservative talk show host Rusty Humphries in an interview first detailed by Right Wing Watch.
+
+Bachmann was careful to distinguish between the House’s ability to impeach the president, which she said would merely be a “stain” on his record, and the Senate’s authority to remove the president from office, which she acknowledged would be unlikely in the Democratic-controlled upper chamber.
+
+Still, the Minnesota Republican warned that impeachment was a “disruptive and harmful” tool.
+
+“Impeachment is important that we have that tool — it’s very important — but it’s also disruptive and harmful to the nation and it’s to be used sparingly,” she said.
+
+But she argued it may be necessary because citizens are on the cusp of civil disobedience because they’re so fed up with Obama’s “thuggery.”
+
+“I think we could be on the cusp of seeing civil disobedience — I’m not saying I want civil disobedience — but people aren’t going to take the thuggery of this president much longer,” she said. “We see thuggery going on in the White House, we’re not going to take it. We’ve drawn a line in the sand, and we’re telling the president you need to recognize ... that you are a co-equal branch of government. You are not a dictator.”
+
+Bachmann said that the U.S. was at risk of devolving “into a dictatorship,” but that the Tea Party had done its job in standing up to Democrats on the fiscal issues surrounding the government shutdown.
+
+“What this is about is whether or not we will hold on to a constitutional republic,” she said. “I want the Tea Party to know they made a profound difference and what they’re fighting for is to see if we’re actually going to be a constitutional republic or if we’re going to be totally devolved into a dictatorship under somebody like Barack Obama.”
+</div>	
+				</section>
+				
+								<section data-transition="fade" data-background-transition="fade">
+										<p>Here is the problem:</p>
+					
+<div style="font-size: 22px; text-align: justify; line-height: 25px;">Rep. <span style="background-color: darkgreen"> Michele Bachmann</span> (R-Minn.) said Tuesday that President <span style="background-color: darkgreen"> Obama</span> has “committed impeachable offenses” and that the House could hold a hearing to impeach.
+
+“We can have an impeachment hearing in the House, and in my mind the president has committed impeachable offenses,” <span style="background-color: darkgreen">Bachmann</span> told conservative talk show host Rusty Humphries in an interview first detailed by Right Wing Watch.
+
+<span style="background-color: darkgreen">Bachmann</span> was careful to distinguish between the House’s ability to impeach the president, which she said would merely be a “stain” on his record, and the Senate’s authority to remove the president from office, which she acknowledged would be unlikely in the Democratic-controlled upper chamber.
+
+Still, the Minnesota Republican warned that impeachment was a “disruptive and harmful” tool.
+
+“Impeachment is important that we have that tool — it’s very important — but it’s also disruptive and harmful to the nation and it’s to be used sparingly,” she said.
+
+But she argued it may be necessary because citizens are on the cusp of civil disobedience because they’re so fed up with <span style="background-color: darkgreen">Obama’s</span> “thuggery.”
+
+“I think we could be on the cusp of seeing civil disobedience — I’m not saying I want civil disobedience — but people aren’t going to take the thuggery of this president much longer,” she said. “We see thuggery going on in the White House, we’re not going to take it. We’ve drawn a line in the sand, and we’re telling the president you need to recognize ... that you are a co-equal branch of government. You are not a dictator.”
+
+<span style="background-color: darkgreen">Bachmann</span> said that the U.S. was at risk of devolving “into a dictatorship,” but that the Tea Party had done its job in standing up to Democrats on the fiscal issues surrounding the government shutdown.
+
+“What this is about is whether or not we will hold on to a constitutional republic,” she said. “I want the Tea Party to know they made a profound difference and what they’re fighting for is to see if we’re actually going to be a constitutional republic or if we’re going to be totally devolved into a dictatorship under somebody like <span style='background-color: darkgreen'>Barack Obama</span>.”
+</div>	
+				</section>
+				
+				
+				<section data-transition="fade" data-background-transition="fade">
+				  Under the assumption that people who relate to each other like each other, we could draw the erroneous conclusion that Michele Bachmann and Barack Obama are of the same kind. 
+				</section>
+				
+				<section>
+					<aside class="notes">Even though it is possible to do amazing things with computational statistical methods, computers don't understand. It is not sufficient
+					to extract information about the co-occurence of entities, but also the nature of their relationships. Co-occurence in politics is antagonism. </aside>
+				</section>
+				
+				<section>
+					Bilder von Texten: Journalistischer Text, eine politische Rede 
+					Was unterscheidet es? Letztere: Meinungsstark
+				</section>
+				
+				<section>
+					<h2>Problem Statement:</h2>
+					<p>Inferring the sentiment (approval / disapproval) of congressional speeches based on the documents and the implied network structure.</p>
+				</section>
+	             
+	            <section style="font-size: 0.9em; display: block;">
+	            	<h2>Literature Review:</h2>
+	            	<ul>
+	            		<li>
+	            	    Thomas, M., Pang, B., Lee, L., 2006. Get out the vote: Determining support or opposition from Congressional floor-debate transcripts. Proceedings of EMNLP.	
+	            	    </li>
+	            		<li>
+	            	    Burfoot, C., Bird, S., Baldwin, T., 2011. Collective Classification of Congressional Floor-Debate Transcripts. Comput. Linguist. 1506–1515.
+	            	    </li>           
+	            	</ul>
+	            	  <aside class="notes"> They do Sentiment classification of U.S. Congressional floor-debate transcripts. Their data set is available for further research. 
+	            	  </aside>
+	            </section>
+				
+				<section>
+					<ul>
+					 <li></li>	
+					 <li>It is common for one speaker to make reference to another in agreement.</li>
+					</ul>
+					Meinungsforschung über Texte
+					Welche Adjektive werden benutzt 
+					
+				</section>
+				
+				<section>
+					<blockquote >
+					Note that from an experimental point of view, this is a very convenient
+					problem to work with because we can automatically determine ground truth (and thus avoid the
+					need for manual annotation) simply by consulting publicly available voting records.	
+					</blockquote>
+				</section>
+				
+				<section>
+				   Erfassen der Prinzipien der politischen Rhetorik. Engramm für ein Weltbild. Ideologische Ähnlichkeiten über geteiltes Vokabular, gemeinsame Themen, gemeinsame
+				   Feinde
+				</section>
+				
+				<section>
+					<h2>Collective Classification</h2>
+					<ul>
+					<li>Ordinary classification methods such as Logistic Regression or Naive Bayes predict the value for actor $Y_i$  using a feature vector $x_i$  containing the observed attributes of the observation</li>
+					<li>In collective classification, one uses also information about actors in the neighbourhood of $Y_i$ in the prediction task</li>
+					
+					</ul>
+				</section>
+				
+				<section>
+				<h1>Discussion</h1>	
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -246,8 +505,7 @@ Reveal.addEventListener( 'customevent', function() {
 						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
 					</p>
 					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+						&ldquo;“Politics is theater. It doesn't matter if you win. You make a statement. You say, "I'm here, pay attention to me”&rdquo;
 					</blockquote>
 				</section>
 
@@ -309,41 +567,12 @@ function linkify( selector ) {
 				</section>
 
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
 					<h2>Export to PDF</h2>
 					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
 					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
 					<script>
 						document.getElementById('slideshare').attributeName = 'allowfullscreen';
 					</script>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
 				</section>
 
 			</div>

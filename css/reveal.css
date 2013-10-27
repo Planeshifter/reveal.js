@@ -1650,4 +1650,18 @@ body {
 	visibility: hidden;
 }
 
-
+/*********************
+ * Definition
+ * ******************/ 
+ 
+.definition {
+    margin: 1em 0;
+    padding: 0.5em 1.5em;
+    text-align: center;
+}
+.definition, .box {
+    background-color: #333333;
+    border: 1px solid #ADD8E6;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+}
