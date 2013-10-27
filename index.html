@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Scrutinizing Political Sentiments</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Philipp Burckhardt">
@@ -119,6 +119,7 @@
 					<section>
 					<h2> Excursion: NewscrapeR </h2>
 					<p>  I have developed tool for scraping Internet data. Used in analysis of newspaper articles and their repurcussions on Twitter. </p>
+					<aside class="notes">Principles of Topic Modelling. Need to go deeper: Sentiment analysis, semantics and relationship analysis. </aside>
 					</section>
 					<section>
  					<h2> NewscrapeR (2)</h2>	
@@ -130,11 +131,7 @@
  					</ul> 
  					</section>
 				</section> 
-				
-				<section>
-					Principles of Topic Modelling. Need to go deeper: Sentiment analysis, semantics and relationship analysis. 
-				</section>
-				
+					
 				<section data-background="#4d7e65" data-transition="linear" data-background-transition="slide">
 					<h1> Natural Language Processing</h1>
 				</section>
@@ -164,12 +161,12 @@
  				
  				<section>
  					<section>
- 				<div style="display:block">Using Semantic Web Technologies, I have built entity recognition system which can be automatically extended (includes already > 50,000 entities).
+ 				<div style="display:block" >Using Semantic Web Technologies, I have built entity recognition system which can be automatically extended (includes already > 50,000 entities).
  				</div>
  			    <a href="http://philipp-burckhardt.com/Semantik/tokenizer" target="_blank">Let's see it in action</a>
  			    	</section>
  			
-            <section style="font-size: 0.9em; display: block;">
+            <section style="font-size: 0.9em; display: block;" data-transition="fade" data-background-transition="fade">
                 <h2> Semantic Web Technologies </h2>
                 <div align="left">
                 <b>RDF (Resource Description Framework) </b>
@@ -189,14 +186,15 @@
             </section>
  				</section>
 				
-				<section data-transition="linear" data-background-transition="slide">
+				<section class="present" style="display: block;" data-transition="fade" data-background-transition="fade">
 					<h2>Co-Occurence Network Data</h2>
 					
-					<div class="definition">
-			\[\begin{align}
-  {\text{Construct (symmetric) Adjacency matrix }}{\mathbf{A}}{\text{ with elements}}  \\
-  {A_{ij}} = {A_{ji}} = \# {\text{ of times actor i and j co - occur in a sentence}}  
-\end{align} \]</div>
+					  <div class="definition">
+					  <p>Construct (symmetric) adjacency matrix $\mathbf{A}$  <br>
+					  with elements </p>
+					  \[{A_{ij}} = {A_{ji}} = \text{#  of times actor i and j co - occur in a sentence } 
+					   \]
+					  </div>
 				</section>
 				
 				<section data-transition="fade" data-background-transition="fade">
@@ -287,7 +285,7 @@ But she argued it may be necessary because citizens are on the cusp of civil dis
 					</blockquote>
 				</section>
 				
-			    <section>
+			    <section style="font-size: 0.9em; display: block;">
 					<h2>Collective Classification</h2>
 					<ul>
 					<li>Ordinary classification methods such as Logistic Regression or Naive Bayes predict the value for actor $Y_i$  using a feature vector $x_i$  containing the observed attributes of the observation</li>
@@ -343,6 +341,9 @@ But she argued it may be necessary because citizens are on the cusp of civil dis
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+    		MathJax.Hub.Rerender();
+			} );
 
 		</script>
 

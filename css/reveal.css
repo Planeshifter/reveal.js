@@ -1657,7 +1657,7 @@ body {
 .definition {
     margin: 1em 0;
     padding: 0.5em 1.5em;
-    text-align: center;
+    text-align: left;
 }
 .definition, .box {
     background-color: #333333;
