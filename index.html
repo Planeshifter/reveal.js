@@ -246,16 +246,17 @@ But she argued it may be necessary because citizens are on the cusp of civil dis
 				
 				<section data-transition="fade" data-background-transition="fade">
 				  Under the assumption that people who relate to each other like each other, we could draw the erroneous conclusion that Michele Bachmann and Barack Obama are of the same kind. 
-				</section>
-				
-				<section>
-					<aside class="notes">Even though it is possible to do amazing things with computational statistical methods, computers don't understand. It is not sufficient
+									<aside class="notes">Even though it is possible to do amazing things with computational statistical methods, computers don't understand. It is not sufficient
 					to extract information about the co-occurence of entities, but also the nature of their relationships. Co-occurence in politics is antagonism. </aside>
 				</section>
-				
+					
 				<section>
-					Bilder von Texten: Journalistischer Text, eine politische Rede 
-					Was unterscheidet es? Letztere: Meinungsstark
+					<h3>Different types of text: News articles,  Political Speeches</h3> 
+					<ul>
+					<li>The latter are much more opinionated, with news articles being much more neutral</li>
+					<li>We can be sure that the inferred co-occurence network carries meaning for speeches, whereas the news articles require more thought.</li>
+					<li>To make life easier, start with the simpler problem </li>
+					</ul>
 				</section>
 				
 				<section>
@@ -273,39 +274,72 @@ But she argued it may be necessary because citizens are on the cusp of civil dis
 	            	    Burfoot, C., Bird, S., Baldwin, T., 2011. Collective Classification of Congressional Floor-Debate Transcripts. Comput. Linguist. 1506–1515.
 	            	    </li>           
 	            	</ul>
-	            	  <aside class="notes"> They do Sentiment classification of U.S. Congressional floor-debate transcripts. Their data set is available for further research. 
+	            	  <aside class="notes"> They do Sentiment classification of U.S. Congressional floor-debate transcripts (before a bill is voted on it is debated in chamber, where members of House and Senate discuss the merits of the bill).  Their data set is available for further research. However,
+	            	  	 Library of Congress makes the congressional record available online, so that I will be able to scrape data myself too. 
 	            	  </aside>
 	            </section>
-	            
-	            <section>
-					<blockquote >
-					Note that from an experimental point of view, this is a very convenient
-					problem to work with because we can automatically determine ground truth (and thus avoid the
-					need for manual annotation) simply by consulting publicly available voting records.	
-					</blockquote>
-				</section>
-				
+	            				
 			    <section style="font-size: 0.9em; display: block;">
+			    	<section>
 					<h2>Collective Classification</h2>
 					<ul>
 					<li>Ordinary classification methods such as Logistic Regression or Naive Bayes predict the value for actor $Y_i$  using a feature vector $x_i$  containing the observed attributes of the observation</li>
 					<li>In collective classification, one uses also information about actors in the neighbourhood of $Y_i$ in the prediction task</li>
+					<li>Goal is then to infer the class labels with either the maximum joint probability or the maximum marginal probability for each node. </li>
 					</ul>
+					</section>
+					<section style="font-size: 0.9em; display: block;">
+						<h2> Classification Techniques: </h2>
+						<ul>
+						<li> <b> Iterative Classifier Approach: </b>
+						<p>One at a time, generate the best classification for a single instance given all other parts of the problem (i.e. the
+						correct labelling of the other instances)</p>
+						</li>	
+						<li><b>Gibbs Sampling:</b>	
+						<p>Iteratively assign class labels to all nodes by drawing from the conditional distribution of the current node given the others. 
+						After a sufficient number of iterations, count the number of times a given node was assigned a certain label and normalize to get probability
+						estimates</p>
+						</li>
+						<li>
+						<b>Variational Methods:</b>
+							<ul>
+							<li>Loopy Belief Propagation Loopy</li> 
+							<li>Mean-Field Relaxation Labeling (MF)</li>
+							<li>Methods have in common that a trial distribution is chosen which is in some sense comparable to the true distribution (e.g. in terms of Kullback–Leibler divergence) 
+								but much simpler to work with</li>
+							</ul>
+						</ul>
+					</section>
+				</section>
+				
+			  	<section style="font-size: 0.9em; display: block;"> 
+			  		<p>Model selection & evaluation will be undertaken via cross-validation. By using publicly available voting records, </p>
+			  		<blockquote>"one can automatically determine ground truth (and thus avoid the
+					need for manual annotation)"</blockquote> 
 				</section>
 				
 				<section>
-					<ul>
-					 <li></li>	
-					 <li>It is common for one speaker to make reference to another in agreement.</li>
-					</ul>
-					Meinungsforschung über Texte
-					Welche Adjektive werden benutzt 					
+			 	<h2>Getting the Data into Shape</h2>	
+					<ol> 
+					<li>Categorize congressional debates depending on the discussed bills.</li>
+					<li>Split the data up into individual speech acts</li>
+					<li>The individual speakers constitue the nodes, and the edges are quotations among between them (notice that we now have
+					an asymmetric adjacency matrix)</li>
+					<li>Assign label from set $\mathcal{L} = \{approval, disapproval\}$ to each speaker (=node) in a debate using voting history (ex-post)</li>
+					</ol>					
 				</section>
-						
+										
 				<section>
-				   Erfassen der Prinzipien der politischen Rhetorik. Engramm für ein Weltbild. Ideologische Ähnlichkeiten über geteiltes Vokabular, gemeinsame Themen, gemeinsame
-				   Feinde
-				</section>			
+					<h2>Open Questions:</h2>
+					<ul>
+					<li>Feature Extraction:</li>
+					<ul>
+					<li>Going beyond uni-grams. But how to aggregate & score adjectives, how to use DBpedia results?</li>
+					<li>Understanding the principles of political rhetoric.</li>
+					</ul>
+					<li>Infer ideological similarities through shared vocabulary, common themes and enemies</li>	
+					</ul>
+				</section>
 	
 				<section>
 				<h1>Discussion</h1>	
