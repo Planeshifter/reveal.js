@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Scrutinizing Political Sentiments</title>
+		<title>Sentiment Mining of the Blogosphere</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Philipp Burckhardt">
@@ -65,53 +65,26 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Scrutinizing Political Sentiments</h1>
-					<h3>Language. Ideologies. Networks</h3>
+					<h1>Sentiment Mining of the Blogosphere</h1>
 					<p>
 						<small>A Presentation by <a href="http://philipp-burckhardt.com">Philipp Burckhardt</a> for the PhD Seminar at <br> 
-						10/28/2013, Heinz College, Carnegie Mellon University</small>
+						11/25/2013, Heinz College, Carnegie Mellon University</small>
 					</p>
-				</section>
-				
-				<section>
-					<h2>State of Things</h2>
-					<p>
-				    The sphere of politics has become blurry with the advent of social media and the blogosphere. In this complicated landscape, we wish to study how people get mobilized
-				    for political action, how politicians try to reach out for their voters, how they portray themselves and their objectives. 	
-					</p>
-				</section>
-				
-				<section data-background="teabaggers1.jpg" data-transition="fade" data-background-transition="fade">
-						<h2 col="black">It's all about slogans. It's all about language.</h2>
-				</section>
-				
-				<section  data-background="change.jpg">
-				</section>
-				
-				<section>
-					<h2>The Rise of Populism</h2>
-					<h3>From representational institutions to unregulated self-expression.  </h3>
 				</section>
 							
 				<section style="display: block;">
-					<h2>Long-Term Objective</h2>
+					<h2>Long-Term Objectives</h2>
 					<ul>
-						<li>Analyze the changing political landscape, trying to identify how alliances form and political networks are established.</li>
-						<li>Study of Lobbyism and Interest Groups (Open and hidden networks) </li>			
-						<li>Investigate how political sentiment is expressed on the Internet</li>
+						<li>Sentiment mining of the Blogosphere (public opinion research, marketing applicationss)</li>
+						<li>Understand how messages about entities are spreading on the Blogosphere (via dynamic network models)</li>
+						<li>Identify opinion leaders and latent communities</li>			
 					</ul>			
-				</section>
-				
-				<section>
-					<h3>The Internet conceived as a Political Space</h3>
-					<p> Upside: The Internet is a big database.</p>
-					<p> Downside: This database is very unstructured. </p>
 				</section>
 				
 				<section >
 			    <h2 style="vertical-align: center">Challenge: How do we cope with the massive overkill of information in the Internet age?</h2>
 			    	
-				</section>
+				</section>			
 				
 				<section>
 					<section>
@@ -128,7 +101,31 @@
 
  					</ul> 
  					</section>
+ 					
+ 				    <section>
+ 					<h2> NewscrapeR (3)</h2>	
+						<div style="position:absolute; width: 200%; top: 0px; left: -450px">
+							<iframe src="http://philipp-burckhardt.com/Red-Raging-Golem/" width="1200" height="700"></iframe>
+ 						</div>
+ 					</ul> 
+ 					</section>
+ 					
 				</section> 
+				
+				<section>
+				 <h2> Technorati.com </h2>
+				 <ul> 
+				 <li> Website which has indexed and categorized more than 112 million blogs (in English language)</li>
+				 <li> Technorati provides for each blog's an "authority" score based on the number of unique blogs linking to the blog over the previous six months.</li>		 	
+				 </ul>
+				
+					
+				</section>
+				
+				<section>
+					<div style="position:absolute; width: 200%; top: 0px; left: -450px"><iframe src="http://technorati.com/blogs/directory/" width="1200" height="700"></iframe>
+ 					</div>
+				</section>
 					
 				<section data-background="#4d7e65" data-transition="linear" data-background-transition="slide">
 					<h1> Natural Language Processing</h1>
@@ -159,7 +156,7 @@
  				
  				<section>
  					<section>
- 				<div style="display:block" >Using Semantic Web Technologies, I have built entity recognition system which can be automatically extended (includes already > 50,000 entities).
+ 				<div style="display:block" >Using Semantic Web Technologies, I have built an entity recognition system which can be automatically extended (includes already > 50,000 entities).
  				</div>
  			    <a href="http://philipp-burckhardt.com/Semantik/tokenizer" target="_blank">Let's see it in action</a>
  			    	</section>
@@ -184,110 +181,37 @@
             </section>
  				</section>
 				
-				<section class="present" style="display: block;" data-transition="fade" data-background-transition="fade">
-					<h2>Co-Occurence Network Data</h2>
-					
-					  <div class="definition">
-					  <p>Construct (symmetric) adjacency matrix $\mathbf{A}$  <br>
-					  with elements </p>
-					  \[{A_{ij}} = {A_{ji}} = \text{#  of times actor i and j co - occur in a sentence } 
-					   \]
-					  </div>
-				</section>
-				
-				<section data-transition="fade" data-background-transition="fade">
-				<p>Here is the problem:</p>
-					
-<div style="font-size: 22px; text-align: justify; line-height: 25px;">Rep. Michele Bachmann (R-Minn.) said Tuesday that President Obama has “committed impeachable offenses” and that the House could hold a hearing to impeach.
-
-“We can have an impeachment hearing in the House, and in my mind the president has committed impeachable offenses,” Bachmann told conservative talk show host Rusty Humphries in an interview first detailed by Right Wing Watch.
-
-Bachmann was careful to distinguish between the House’s ability to impeach the president, which she said would merely be a “stain” on his record, and the Senate’s authority to remove the president from office, which she acknowledged would be unlikely in the Democratic-controlled upper chamber.
-
-Still, the Minnesota Republican warned that impeachment was a “disruptive and harmful” tool.
-
-“Impeachment is important that we have that tool — it’s very important — but it’s also disruptive and harmful to the nation and it’s to be used sparingly,” she said.
-
-But she argued it may be necessary because citizens are on the cusp of civil disobedience because they’re so fed up with Obama’s “thuggery.”
-
-“I think we could be on the cusp of seeing civil disobedience — I’m not saying I want civil disobedience — but people aren’t going to take the thuggery of this president much longer,” she said. “We see thuggery going on in the White House, we’re not going to take it. We’ve drawn a line in the sand, and we’re telling the president you need to recognize ... that you are a co-equal branch of government. You are not a dictator.”
-
-Bachmann said that the U.S. was at risk of devolving “into a dictatorship,” but that the Tea Party had done its job in standing up to Democrats on the fiscal issues surrounding the government shutdown.
-
-“What this is about is whether or not we will hold on to a constitutional republic,” she said. “I want the Tea Party to know they made a profound difference and what they’re fighting for is to see if we’re actually going to be a constitutional republic or if we’re going to be totally devolved into a dictatorship under somebody like Barack Obama.”
-</div>	
-				</section>
-				
-								<section data-transition="fade" data-background-transition="fade">
-										<p>Here is the problem:</p>
-					
-<div style="font-size: 22px; text-align: justify; line-height: 25px;">Rep. <span style="background-color: darkgreen"> Michele Bachmann</span> (R-Minn.) said Tuesday that President <span style="background-color: darkgreen"> Obama</span> has “committed impeachable offenses” and that the House could hold a hearing to impeach.
-
-“We can have an impeachment hearing in the House, and in my mind the president has committed impeachable offenses,” <span style="background-color: darkgreen">Bachmann</span> told conservative talk show host Rusty Humphries in an interview first detailed by Right Wing Watch.
-
-<span style="background-color: darkgreen">Bachmann</span> was careful to distinguish between the House’s ability to impeach the president, which she said would merely be a “stain” on his record, and the Senate’s authority to remove the president from office, which she acknowledged would be unlikely in the Democratic-controlled upper chamber.
-
-Still, the Minnesota Republican warned that impeachment was a “disruptive and harmful” tool.
-
-“Impeachment is important that we have that tool — it’s very important — but it’s also disruptive and harmful to the nation and it’s to be used sparingly,” she said.
-
-But she argued it may be necessary because citizens are on the cusp of civil disobedience because they’re so fed up with <span style="background-color: darkgreen">Obama’s</span> “thuggery.”
-
-“I think we could be on the cusp of seeing civil disobedience — I’m not saying I want civil disobedience — but people aren’t going to take the thuggery of this president much longer,” she said. “We see thuggery going on in the White House, we’re not going to take it. We’ve drawn a line in the sand, and we’re telling the president you need to recognize ... that you are a co-equal branch of government. You are not a dictator.”
-
-<span style="background-color: darkgreen">Bachmann</span> said that the U.S. was at risk of devolving “into a dictatorship,” but that the Tea Party had done its job in standing up to Democrats on the fiscal issues surrounding the government shutdown.
-
-“What this is about is whether or not we will hold on to a constitutional republic,” she said. “I want the Tea Party to know they made a profound difference and what they’re fighting for is to see if we’re actually going to be a constitutional republic or if we’re going to be totally devolved into a dictatorship under somebody like <span style='background-color: darkgreen'>Barack Obama</span>.”
-</div>	
-				</section>
-				
-				
-				<section data-transition="fade" data-background-transition="fade">
-				  Under the assumption that people who relate to each other like each other, we could draw the erroneous conclusion that Michele Bachmann and Barack Obama are of the same kind. 
-									<aside class="notes">Even though it is possible to do amazing things with computational statistical methods, computers don't understand. It is not sufficient
-					to extract information about the co-occurence of entities, but also the nature of their relationships. Co-occurence in politics is antagonism. </aside>
-				</section>
-					
-				<section>
-					<h3>Different types of text: News articles,  Political Speeches</h3> 
-					<ul>
-					<li>The latter are much more opinionated, with news articles being much more neutral</li>
-					<li>We can be sure that the inferred co-occurence network carries meaning for speeches, whereas the news articles require more thought.</li>
-					<li>To make life easier, start with the simpler problem </li>
-					</ul>
-				</section>
-				
 				<section>
 					<h2>Problem Statement:</h2>
-					<p>Inferring the sentiment (approval / disapproval) of congressional speeches towards legislation based on the documents and the implied network structure.</p>
+				    <ol>
+				    <li> Classify web blogs into categories using both text data and the information contained in the connections to other blogs (Toy Example)</li>
+				    <li> Infer the sentiment (positive / negative) of posts about certain entities based on the relevant subset of documents and the implied network structure. </li>
+				    </ol>
 				</section>
-	             
-	            <section style="font-size: 0.9em; display: block;">
-	            	<h2>Literature Review:</h2>
-	            	<ul>
-	            		<li>
-	            	    Thomas, M., Pang, B., Lee, L., 2006. Get out the vote: Determining support or opposition from Congressional floor-debate transcripts. Proceedings of EMNLP.	
-	            	    </li>
-	            		<li>
-	            	    Burfoot, C., Bird, S., Baldwin, T., 2011. Collective Classification of Congressional Floor-Debate Transcripts. Comput. Linguist. 1506–1515.
-	            	    </li>           
-	            	</ul>
-	            	  <aside class="notes"> They do Sentiment classification of U.S. Congressional floor-debate transcripts (before a bill is voted on it is debated in chamber, where members of House and Senate discuss the merits of the bill).  Their data set is available for further research. However,
-	            	  	 Library of Congress makes the congressional record available online, so that I will be able to scrape data myself too. 
-	            	  </aside>
-	            </section>
-	            				
+				
+			 <section class="present" style="display: block;" data-transition="fade" data-background-transition="fade">
+					<h2>Blog Network Structure</h2>
+					
+					  <div class="definition">
+					  <p>Construct (asymmetric) adjacency matrix $\mathbf{A}$  <br>
+					  with elements </p>
+					  \[{A_{ij}} = \text{#  of times blog i links to blog j} 
+					   \]
+					  </div>
+				</section>			
+								
+	                         				
 			    <section style="font-size: 0.9em; display: block;">
-			    	<section>
 					<h2>Collective Classification</h2>
 					<ul>
 					<li>Ordinary classification methods such as Logistic Regression or Naive Bayes predict the value for actor $Y_i$  using a feature vector $x_i$  containing the observed attributes of the observation</li>
 					<li>In collective classification, one uses also information about actors in the neighbourhood of $Y_i$ in the prediction task</li>
 					<li>Goal is then to infer the class labels with either the maximum joint probability or the maximum marginal probability for each node. </li>
 					</ul>
-					</section>
-					<section style="font-size: 0.9em; display: block;">
-						<h2> Classification Techniques: </h2>
+				</section>
+				
+				<section style="font-size: 0.75em; display: block;">
+						<h2> Estimation Techniques: </h2>
 						<ul>
 						<li> <b> Iterative Classifier Approach: </b>
 						<p>One at a time, generate the best classification for a single instance given all other parts of the problem (i.e. the
@@ -301,42 +225,33 @@ But she argued it may be necessary because citizens are on the cusp of civil dis
 						<li>
 						<b>Variational Methods:</b>
 							<ul>
-							<li>Loopy Belief Propagation Loopy</li> 
+							<li>Loopy Belief Propagation</li> 
 							<li>Mean-Field Relaxation Labeling (MF)</li>
 							<li>Methods have in common that a trial distribution is chosen which is in some sense comparable to the true distribution (e.g. in terms of Kullback–Leibler divergence) 
 								but much simpler to work with</li>
 							</ul>
+						</li>
 						</ul>
 					</section>
-				</section>
-				
-			  	<section style="font-size: 0.9em; display: block;"> 
-			  		<p>Model selection & evaluation will be undertaken via cross-validation. By using publicly available voting records, </p>
-			  		<blockquote>"one can automatically determine ground truth (and thus avoid the
-					need for manual annotation)"</blockquote> 
-				</section>
-				
-				<section>
-			 	<h2>Getting the Data into Shape</h2>	
-					<ol> 
-					<li>Categorize congressional debates depending on the discussed bills.</li>
-					<li>Split the data up into individual speech acts</li>
-					<li>The individual speakers constitue the nodes, and the edges are quotations among between them (notice that we now have
-					an asymmetric adjacency matrix)</li>
-					<li>Assign label from set $\mathcal{L} = \{approval, disapproval\}$ to each speaker (=node) in a debate using voting history (ex-post)</li>
-					</ol>					
-				</section>
 										
 				<section>
 					<h2>Open Questions:</h2>
 					<ul>
-					<li>Feature Extraction:</li>
-					<ul>
-					<li>Going beyond uni-grams. But how to aggregate & score adjectives, how to use DBpedia results?</li>
-					<li>Understanding the principles of political rhetoric.</li>
+					<li>Feature Extraction: Going beyond uni-grams. But how to aggregate & score adjectives, how to use DBpedia results?</li>
+					<li>Study the empricial performance of collective classification compared to classicial approaches. Under which conditions does
+				    it perform better? </li>
 					</ul>
-					<li>Infer ideological similarities through shared vocabulary, common themes and enemies</li>
-					</ul>
+				</section>
+				
+				
+				<section>
+				  <h2>Currently Discussed Research Projects</h2>
+				  <ul>
+				  	<li>Possible participation in a project led by <b>Rema Padman</b> and <b>Jamie Callan</b> which tries to use content from internet blogs
+				  		and forums of patients with chronic kidney disease to inform doctor's decisisions and ways of approaching patients.  </li>
+				  	<li> Extracting Rich Network Structure from Text	</li>	
+				  	<li> Analysis of Network Evolution	</li>
+				  </ul>
 				</section>
 	
 				<section>
